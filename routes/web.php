@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Route;
 
 $ControllersPath = 'App\Http\Controllers';
 
-Route::get('/', $ControllersPath.'\CommController@index');
+// Route::get('/', $ControllersPath.'\CommController@index');
+
+Route::get('/', function() {
+    return view('login');
+});
 
 Route::get('/login', $ControllersPath.'\CommController@index');
 
